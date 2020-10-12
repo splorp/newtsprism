@@ -1,0 +1,216 @@
+Summary of Math Library v3.02 for NOS 2.x
+
+1. General Math
+
+1.1 Numbers
+e           The natural number. 2.71828182846
+euler       The Euler-Mascheroni number. 0.577215664902
+i           The positive square root of negative one. i
+infinite    The largest number for NOS 2^1024.
+pi          The circle ratio.  3.14159265359
+primes      Table of the first 2585 prime numbers
+
+1.2 General Math Routines
+Name                    Ability Description
+________________        ______  ____________________________
+|+|                     C M R P Adds two numbers
+|-|                     C M R P Subtracts a number from another
+|*|                     C M R P Multiplies two numbers
+|/|                     C M R   Divides one number into another
+|=|                     C M R P Tests two numbers for equality
+|<>|                    C M R P Tests two numbers for inequality
+abs                     C M R   Magnitude of a number
+acos                    C M R   Arccosine of a number
+acosh                   C M R   Hyperbolic arccosine of a number
+AirySolution            C   R   Airy solution to Bessel's Equation
+ArrayAve                C M R   Arithmetic average of array
+ArrayMax                  M R   Maximum in array
+ArrayMin                  M R   Minimum in array
+ArrayRemoveDuplicates   C M R   Removes duplicates from array
+asin                    C M R   Arcsine of a number
+asinh                   C M R   Hyperbolic arcsine of a number
+AssocLegendre           C   R   Associated Legendre functions
+atan                    C M R   Arctangent of a number
+atan2                   C M R   Arctangent of a y/x in correct quadrant
+atanh                   C M R   Hyperbolic arctangent of a number
+BaseConv                  M R   Converts to and from base 10
+BernoulliNumber                 Bernoulli number
+BernoulliPolynomial     C   R   Bernoulli function at a number
+Bessel                  C   R   Bessel Function
+BesselSolution          C   R   Bessel and Neumann solution w/derivs
+Beta                    C M R   Beta function
+BinCoeff                C M R   Binomial Coefficient
+ChebyshevDerivative         R   Derivative of Chebyshev polynomial
+ChebyshevEval               R   Chebyshev polynomial evaluation
+ChebyshevFit                R   Chebyshev polynomial function approximation
+ChebyshevIntegral           R   Integral of Chebyshev polynomial
+CleanComplex            C M R   Returns real if z.i=0
+Cos                     C M R   Cosine of a number
+Cosh                    C M R   Hyperbolic cosine of a number
+Cross                   C   R   Cross product of three-vector
+Curl                            Curl of vector of functions
+Derivative              C M   P Derivative of function at value
+DirichletBeta           C M R   Infinite power sum Beta
+DirichletEta            C M R   Infinite power sum Eta
+DirichletLambda         C M R   Infinite power sum Lambda
+Divergence                      Divergence of vector of functions
+Erf                     C M R   Error function, corrects a NOS 2.0 error
+ErfC                    C M R   Complimentary Error function
+EulerNumber                     Euler number
+EulerPolynomial         C   R   Euler function at a number
+Exp                     C M R   Exponential of a number
+fabs                    C M R   Magnitude of a number
+Factorial               C M R   Factorial function
+FloorMod                        Subtracts until in range
+Gamma                   C M R   Gamma function
+GaussJordan             C M R   Simulataneous equations solving
+Gradient                        Gradient of a function
+HankelSolution          C   R   Hankel solution to Bessel's Equation
+IncompleteBeta              R   Incomplete Beta function
+IncompleteGamma             R   Incomplete Gamma function
+Infimum                         Minimum of function in range
+Integral                  M   P Integral of function between range
+IsComplex               C M R   Tests if a number is a complex type
+IsHermitian             C M R   Tests if a matrix is Hermitian
+IsOrthogonal            C M R   Tests if a matrix is orthogonal
+IsRational              C M R   Tests if a number is a fraction
+IsSymmetric             C M R   Tests if a matrix is symmetric
+IsSkewSymmetric         C M R   Tests if a matrix is skew symmetric
+IsUnitary               C M R   Tests if a matrix is Unitary
+Laplacian                   R   Laplacian differential operator
+LBeta                   C M R   Log of Beta function
+LBinCoeff               C M R   Log of BinCoeff function
+LegendrePolynomial      C   R   Legendre polynomials
+LGamma                  C M R   Log of Gamma function
+LinearRegression        C M R   General Linear Regression of paired data
+Log                     C M R   Natural log of a number
+LUDecomp                C M R   Lower-Upper decomposition of matrix
+LUBacksub               C M R   LU backsubstitution equation solving
+MakeComplex             C M R   Use this to make a complex
+MakePolynomial          C M R   Use this to initialize a polynomial
+MakeRational              M     Use this to make a rational number
+ModifiedBessel          C   R   Modified Bessel Function
+ModifiedNeumann         C   R   Modified Neumann Function
+ModifiedBesselSolution  C   R   Modified Bessel,Neumann w/derivatives
+Negate                  C M R   Negates a number
+Neumann                 C   R   Neumann function
+PFE                           P Polynomial fraction expansion
+PiDigit                         Pi digit extraction for various bases
+PolyGamma               C   R   Derivatives of LGamma
+PolyLogMod              C   R   Modulus of PolyLog function
+PolyNom                 C M R   Evaluates polynomial at a number
+PolynomialFit           C   R   Fit x and y data to any polynomial
+PolynomialToChebyshev       R   Converts polynomial to Chebyshev polynomial
+PolynomialZeroes        C   R   Zeroes of a polynomial
+Pow                     C M R   Power
+PowMod                  C   R   Modulus of Pow function
+QGaussIntegral                  Gauss-Legendre Quadrature integration
+ReduceRational            M R   Reduce rational to smallest fraction
+RemQuo                  C   R P Remainder and quotient of a division
+RiemannSiegelTheta      C   R   Riemann-Siegel Theta function
+RiemannSiegelZ          C   R   Riemann-Siegel Z function
+RiemannZeta             C   R   Riemann Zeta function
+RootSearch              C       Finds the anser to transcendental equations
+Round                   C M R   Rounds to the nearest integer
+RoundDec                C M R   Rounds at a decimal place
+RoundSigFigs            C M R   Rounds to some number of significant figures
+Sin                     C M R   Sine of a number
+Sinh                    C M R   Hyperbolic sine of a number
+SinSeries               C M R   sine series summation
+SphericalBessel         C   R   Spherical Bessel Function
+SphericalNeumann        C   R   Spherical Neumann Function
+SphericalBesselSolution C   R   Spherical Bessel,Neumann w/derivatives
+Sqrt                    C M R   Square root of a number
+Square                  C M R   Square of a number
+Supremum                        Maximum of function in range
+SVDecomp                C M R   Singular Value decomposition of matrix
+SVBacksub               C M R   SV backsubstitution equation solving
+SymbolicDerivative        M R P Symbolic derivative
+SymbolicIntegral          M R P Symbolic integral
+SymbolicEval              M R P Evaluation of function objects
+Tan                     C M R   Tangent of a number
+Tanh                    C M R   Hyperbolic tangent of a number
+UnitNormal                      Unit normal vector for a function
+
+note: Functions will handle C = Complex, M = Matrix, R = Rational, P = Polynomial
+
+2. Statistical Routines
+
+2.1 General Statistical routines
+Name                    Description
+_________               ____________________________
+SUniform                standard Uniform random number generator
+SNormal                 standard Normal random number generator
+SGamma                  standard Gamma random number generator
+Choose                  picks N numbers from a set of numbers
+Arrangements            finds how many arrangements
+EstimateMode            estimates the distibution peak from data
+EstimateMedian          estimates the distibution median from data
+EstimateDiscreteness    estimates the discreteness of the data
+EstimateProbability     estimates the probability at each data point
+EstimateCumulation      estimates the cumulation at each data point
+
+2.2  Distribution properties
+Name            Description
+_________       ____________________________
+name            name of the distribution
+type            'continuous or 'discrete
+range           the normalized range where the distribution is valid
+
+2.3  Distribution functions
+Name                    Description
+_________               ____________________________
+Test                    tests data for fitness
+GroupPick               picks N numbers from distribution
+NotWithinRange          tests a number if within range
+Normalize               normalizes a number
+Unnormalize             reverses normalization of a number
+CheckParameters         tests parameters if valid
+Generator               generates a random number for distribution
+Probability             probability function
+Cumulation              cumulative function
+InverseCumulation       inverse of Cumulative function
+Mean                    Expectation value
+Median                  median value
+Mode                    peak of distribution
+StandardDeviation       standard deviation
+Estimator               estimates parameters from data
+Hazard                  hazard function at a number
+
+2.4 Continuous Distributions
+Name            Alternate Name
+_________       ____________________________
+Beta
+Cauchy
+ChiSquared
+Delta           Dirac Delta
+Exponential
+Gamma
+Gumbel          Extreme-value
+Logistic
+LogNormal
+MassiveBoson    Bose-Einstein (1/2)
+MassiveFermion  Fermi-Dirac (1/2)
+MasslessBoson   Bose-Einstein (2)
+MasslessFermion Fermi-Dirac (2)
+Maxwell
+Normal          Gaussian
+Pareto
+PT5             Pearson Type V, Inverted Gamma
+PT6             Pearson Type VI
+Rayleigh
+Snedecor        Snedecor's F
+Student         Student's t
+Uniform
+vonMises
+Weibull
+
+2.5  Discrete Distributions
+Bernoulli
+Binomial
+DiscreteUniform
+Geometric
+Hypergeometric
+Logarithmic
+NegativeBinomial
+Poisson
