@@ -1,20 +1,17 @@
-<meta http-equiv="Content-Type" content="text/html; charset=US-ASCII">
-<base href="http://hometown.aol.com/newtsprism/PlanetFinder/PlanetFinder.txt"><div style="margin:-1px -1px 0;padding:0;border:1px solid #999;background:#fff"><div style="margin:12px;padding:8px;border:1px solid #999;background:#ddd;font:13px arial,sans-serif;color:#000;font-weight:normal;text-align:left">This is Google&#39;s cache of <a href="http://hometown.aol.com/newtsprism/PlanetFinder/PlanetFinder.txt" style="text-decoration:underline;color:#00c">http://hometown.aol.com/newtsprism/PlanetFinder/PlanetFinder.txt</a>. It is a snapshot of the page as it appeared on Jul 15, 2008 18:12:58 GMT. The <a href="http://hometown.aol.com/newtsprism/PlanetFinder/PlanetFinder.txt" style="text-decoration:underline;color:#00c">current page</a> could have changed in the meantime. <a href="http://www.google.com/intl/en/help/features_list.html#cached" style="text-decoration:underline;color:#00c">Learn more</a><br><br><div style="float:right"><a href="http://209.85.173.132/search?q=cache:J2XExCikLTMJ:hometown.aol.com/newtsprism/PlanetFinder/PlanetFinder.txt+newtsprism&amp;hl=en&amp;client=safari&amp;gl=us&strip=1" style="text-decoration:underline;color:#00c">Text-only version</a></div>
-<div>These search terms are highlighted: <span style="background:#ffff66;color:black;font-weight:bold">newtsprism</span>&nbsp;&nbsp;</div></div></div><div style="position:relative">
-<pre>Planet Finder v1.0 ReadMe file
+Planet Finder v1.0 ReadMe file
 Date: 20 October 1999
 
-Armchair astronomers, casual observers, and archaeo-astronomers will rejoice with the use of Planet Finder.  No longer is it necessary to carry around printouts of an ephemeris.  Now you can explore the heavens, compare ancient observations, or just find out when the Sun goes down, right in the palm of your hand.  No need to perform lengthy calculations by your hand calculator - Planet Finder does it all for you.
+Armchair astronomers, casual observers, and archaeo-astronomers will rejoice with the use of Planet Finder. No longer is it necessary to carry around printouts of an ephemeris. Now you can explore the heavens, compare ancient observations, or just find out when the Sun goes down, right in the palm of your hand. No need to perform lengthy calculations by your hand calculator - Planet Finder does it all for you.
 
-Planet Finder&#39;s calendar does not rely on the Operating System date system so you can browse any date in history.  A word of caution though, the position algorithm (like any) gets increasingly inaccurate as the date gets very far from the present.  Observations in Ptolemy&#39;s Almagest dating 150 AD have come very close to what Planet Finder will give you.  It is fair to say that the algorithms are usable for 3000 years from the present.  The current algorithm is accurate to one arcminute within 300 years of the present, outside of that maybe as much as a degree?  Of course Pluto is about 15 times more inaccurate since we have only been watching it for about a quarter of its orbit.
+Planet Finder&#39;s calendar does not rely on the Operating System date system so you can browse any date in history. A word of caution though, the position algorithm (like any) gets increasingly inaccurate as the date gets very far from the present. Observations in Ptolemy&#39;s Almagest dating 150 AD have come very close to what Planet Finder will give you. It is fair to say that the algorithms are usable for 3000 years from the present. The current algorithm is accurate to one arcminute within 300 years of the present, outside of that maybe as much as a degree? Of course Pluto is about 15 times more inaccurate since we have only been watching it for about a quarter of its orbit.
 
-Planet Finder is an astronomical calculator for the Newton 2.x operating system.  It has been tested on an MP2100, please let Prism Research know if it operates on any other machine including NOS 1.x.  The application is divided into two parts, the engine (AstroLib) and the interface (Planet Finder).  AstroLib is a powerful prototype of astronomy routines that can be imported into any application.  Planet Finder will not operate unless AstroLib is loaded onto the Newton first.
+Planet Finder is an astronomical calculator for the Newton 2.x operating system. It has been tested on an MP2100, please let Prism Research know if it operates on any other machine including NOS 1.x. The application is divided into two parts, the engine (AstroLib) and the interface (Planet Finder). AstroLib is a powerful prototype of astronomy routines that can be imported into any application. Planet Finder will not operate unless AstroLib is loaded onto the Newton first.
 
-Planet Finder is released as Honorware, i.e. if you have honor, you will pay Prism Research US$10 for the two years of research it took to put this little application together.  An update will be continually released at http://hometown.aol.com/<b style="color:black;background-color:#ffff66">NewtsPrism</b> as long as people have honor.  There are no passwords or obnoxious windows popping up.  The downloaded version is the fully working version.
+Planet Finder is released as Honorware, i.e. if you have honor, you will pay Prism Research US$10 for the two years of research it took to put this little application together. An update will be continually released at http://hometown.aol.com/<b style="color:black;background-color:#ffff66">NewtsPrism</b> as long as people have honor. There are no passwords or obnoxious windows popping up. The downloaded version is the fully working version.
 
 In the future, Prism Research intends to write other astronomy and astrology applications which utilize the existing AstroLib library of routines.
 
-Questions on the various parts of Planet Finder may be answered by the onboard help.  If not, don&#39;t hesitate to contact Prism Research at <b style="color:black;background-color:#ffff66">NewtsPrism</b>@aol.com.
+Questions on the various parts of Planet Finder may be answered by the onboard help. If not, don&#39;t hesitate to contact Prism Research at <b style="color:black;background-color:#ffff66">NewtsPrism</b>@aol.com.
 
 Jonathan Kipling Knight
 Owner/Programmer
@@ -22,20 +19,18 @@ Prism Research
 6940 N. Academy Blvd. PMB #332
 Colorado Springs, CO 80918
 
-The following list is the known issues which will be fixed in future versions.  If your desires are not in the present version and not in this list, please e-mail your request to <b style="color:black;background-color:#ffff66">NewtsPrism</b>@aol.com.
+The following list is the known issues which will be fixed in future versions. If your desires are not in the present version and not in this list, please e-mail your request to NewtsPrism@aol.com
 
 1) No pretty icon in the Extras Drawer.
 
-2) Current the print button only prints the text to the Inspector.  Future versions will route printing to a printer or the notepad.
+2) Current the print button only prints the text to the Inspector. Future versions will route printing to a printer or the notepad.
 
-3) No calendar picker for Mayan or Quiche calendars.  They are currently defaulted to the Gregorian calendar picker.
+3) No calendar picker for Mayan or Quiche calendars. They are currently defaulted to the Gregorian calendar picker.
 
 4) Time and time zone are not updated consistently though most of the time it is.
 
-5) Horizon coordinates and rise/set times will drift apart when dates are far into the past (first Millennium).  This issue deals with the lost significant figures in the calculations.  Tough issue to solve with present algorithm.
+5) Horizon coordinates and rise/set times will drift apart when dates are far into the past (first Millennium). This issue deals with the lost significant figures in the calculations. Tough issue to solve with present algorithm.
 
-6) Not all of the help pages fit within the help window.  Need some tweaking.
+6) Not all of the help pages fit within the help window. Need some tweaking.
 
-7) The check boxes for atmospheric effects and continuous update are not saved.  This may be a good thing, or it may not.
-
-</pre>
+7) The check boxes for atmospheric effects and continuous update are not saved. This may be a good thing, or it may not.
