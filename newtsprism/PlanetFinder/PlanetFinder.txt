@@ -19,7 +19,7 @@ Prism Research
 6940 N. Academy Blvd. PMB #332
 Colorado Springs, CO 80918
 
-The following list is the known issues which will be fixed in future versions. If your desires are not in the present version and not in this list, please e-mail your request to NewtsPrism@aol.com
+The following list is the known issues which will be fixed in future versions. If your desires are not in the present version and not in this list, please e-mail your request to newtsprism@aol.com
 
 1) No pretty icon in the Extras Drawer.
 
