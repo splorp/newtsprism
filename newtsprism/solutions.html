@@ -1,0 +1,181 @@
+<html>
+<head>
+   <meta charset="utf-8" />
+   <meta name="Author" content="Cassandra C. Johnson">
+   <meta http-equiv="copyright" content="1997,1998 Jonathan Kipling Knight, Prism Research">
+   <title>Newton's Prism-Home of Prism Research</title>
+   <meta name="keywords" content="newton, apple, fonts, computer, computers, macintosh, programs, program, business, links, prism, research, math, science, internet, online">
+   <meta name="description" content="A Newton developer's site. With programs, information, and resources for the Newton.">
+
+</head>
+<body text="#000000" bgcolor="#C0C0C0" link="#0000EE" vlink="#551A8B" alink="#FF0000" background="/newtsprism/graphics/b7.gif">
+
+<center><font size="+2">Newton Solutions</font></center>
+
+This page contains answers to various math and physics problems that were solved on a Newton device using <a href="/newtsprism/nsScribe/nsScribe.html">nsScribe</a> and <a href="/newtsprism/MathLib/MathLib.html">MathLib</a>in Newton Works.
+
+<p>Document date: 22 July 98
+
+<p><a name="Math"></a>Math Section
+
+<p>1. Problem: Gunther had just been travelling around Europe with two of his buddies and they had left-over money from three countries. They all exchanged their monies at the local bank. Gunther got 1619.70 EEC units, Pierre got 8659.81 EEC units, and Mario got 2643.57 EEC units. They all started with the following monies.
+
+<p>Gunther: 20.50 Francs, 12.23 Lira, 200 Marks
+<br>Pierre: 34.50 Francs, 80.20 Lira, 10 Marks
+<br>Mario: 12.20 Francs, 23.45 Lira, 210 Marks
+
+<p>What were the current exchange rates for the three countries?
+
+<p>Newton Solution: This is a 3-equations, 3-unknowns problem which can be solved with matrices. MathLib has three different ways to solve Ax = B. The simplest way is with Gauss-Jordan elimination unless A happens to be singular. The Newton Solution is as follows:
+
+<p><tt>local m,A,B; // declare local variables</tt>
+<br><tt>A := [[20.5,12.23,200],</tt>
+<br><tt>[34.5,80.20,10],</tt>
+<br><tt>[12.20,23.45,210]]; // original monies</tt>
+<br><tt>B := [1619.70,8659.81,2643.57]; // EEC money</tt>
+<br><tt>m := GetLibrary('math); // get library</tt>
+<br><tt>m:GaussJordan(A,B); // solve Ax=B, place x in B</tt>
+<br><tt>m:RoundDec(B,2) // round to two decimal places</tt>
+<br><tt>= [14.55,101.67,0.39]</tt>
+
+<p>14.55 EEC units per Franc,
+<br>101.69 EEC units per Lira,
+<br>0.39 EEC units per Mark.
+
+<p>(Any N-equation problem can be solved in this manner.)
+
+<p><a name="Physics"></a>Physics Section
+
+<p>1. Problem: Cosmic background radiation is the light emitted from the Universe as a Planck black-body. The background noise from the sky was measured by an interferometer at an altitude of 40 km:
+<br>&nbsp;
+<table border="3" cols="2" width="40%">
+<caption><thead>
+
+<p></thead><tbody>
+
+<p></tbody>
+
+<p>(after Weiss 1980.)&nbsp;</caption>
+
+<tr>
+<th>f(1/cm)</th>
+
+<th>flux</th>
+</tr>
+
+<tr>
+<td>2.38</td>
+
+<td>8.79</td>
+</tr>
+
+<tr>
+<td>3.40</td>
+
+<td>12.13</td>
+</tr>
+
+<tr>
+<td>4.41</td>
+
+<td>14.81</td>
+</tr>
+
+<tr>
+<td>5.42</td>
+
+<td>16.05</td>
+</tr>
+
+<tr>
+<td>6.44</td>
+
+<td>16.09</td>
+</tr>
+
+<tr>
+<td>7.45</td>
+
+<td>13.89</td>
+</tr>
+
+<tr>
+<td>8.46</td>
+
+<td>12.42</td>
+</tr>
+
+<tr>
+<td>9.48</td>
+
+<td>8.63</td>
+</tr>
+
+<tr>
+<td>11.50</td>
+
+<td>5.52</td>
+</tr>
+
+<tr>
+<td>13.53</td>
+
+<td>4.92</td>
+</tr>
+
+<tr>
+<td>15.20</td>
+
+<td>1.87</td>
+</tr>
+
+<tr>
+<td>20.03</td>
+
+<td>0.70</td>
+</tr>
+</table>
+Find the temperature of the Universe.
+
+<p>Newton Solution: Planck's black-body radiation formula is of the form
+
+<p>flux = B f<sup>3</sup> / (exp(f*c<sub>2</sub>/T)-1)
+<br>where f = 1/wavelength
+<br>Minimize the difference between measured and calculated.
+
+<p><tt>local m,data,answer,flux,f,c2;</tt>
+<br><tt>m := GetLibrary('math);</tt>
+<br><tt>data :=</tt>
+<br><tt>[</tt>
+<br><tt>&nbsp;&nbsp;&nbsp; [2.38, 3.40, 4.41, 5.42, 6.44, 7.45, 8.46,9.48,11.50,13.53,15.20,20.03],</tt>
+<br><tt>&nbsp;&nbsp;&nbsp; [8.79,12.13,14.81,16.05,16.09,13.89,12.42,8.63,
+5.52, 4.92, 1.87, 0.70]</tt>
+<br><tt>];</tt>
+<br><tt>c2 := 1.4388; // cm K</tt>
+<br><tt>flux := func(f,T,a)</tt>
+<br><tt>&nbsp;&nbsp;&nbsp; a*Pow(f,3)/Expm1(f*c2/T);</tt>
+<br><tt>RSSD := func(T,a)</tt>
+<br><tt>begin</tt>
+<br><tt>&nbsp;&nbsp;&nbsp; local err,y:=0;</tt>
+<br><tt>&nbsp;&nbsp;&nbsp; foreach i,val in data[0] do</tt>
+<br><tt>&nbsp;&nbsp;&nbsp; begin</tt>
+<br><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; err := data[1][i]-call
+flux with (val,T,a);</tt>
+<br><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; y := y + err*err;</tt>
+<br><tt>&nbsp;&nbsp;&nbsp; end;</tt>
+<br><tt>&nbsp;&nbsp;&nbsp; sqrt(y)</tt>
+<br><tt>end;</tt>
+<br><tt>TUni := func(a)
+<br><tt>&nbsp;&nbsp;&nbsp; m:Infimum(NIL,RSSD,[[0.1,6],a],0);
+<br><tt>f := func(a)
+<br><tt>&nbsp;&nbsp;&nbsp; call RSSD with (call TUni with (a),a);
+<br><tt>call TUni with (m:Infimum(nil,f,[[0.1,6]],0));</tt>
+<br><tt>= 2.78750068219096</tt>
+
+<p>Cosmic black-body temperature of the Universe is 2.79 K
+
+<p>And using Works Calculations:
+<p><img src="/newtsprism/graphics/UniTemp.gif" alt="Works e.g." nosave border="0" height="482" width="322"></p>
+
+</body>
+</html>
