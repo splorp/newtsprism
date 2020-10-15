@@ -8,25 +8,25 @@
    <meta name="description" content="A Newton developer's site. With programs, information, and resources for the Newton.">
 
 </head>
-<body text="#000000" bgcolor="#C0C0C0" link="#0000EE" vlink="#551A8B" alink="#FF0000" background="/newtsprism/graphics/b7.gif">
+<body background="/newtsprism/graphics/b7.gif">
 
-<center><font size="+2">Newton Solutions</font></center>
+<h1>Newton Solutions</h1>
 
-This page contains answers to various math and physics problems that were solved on a Newton device using <a href="/newtsprism/nsScribe/nsScribe.html">nsScribe</a> and <a href="/newtsprism/MathLib/MathLib.html">MathLib</a>in Newton Works.
+<p>This page contains answers to various math and physics problems that were solved on a Newton device using <a href="/newtsprism/nsScribe/nsScribe.html">nsScribe</a> and <a href="/newtsprism/MathLib/MathLib.html">MathLib</a>in Newton Works.</p>
 
-<p>Document date: 22 July 98
+<p>Document date: 22 July 98</p>
 
-<p><a name="Math"></a>Math Section
+<p><a name="Math"></a>Math Section</p>
 
-<p>1. Problem: Gunther had just been travelling around Europe with two of his buddies and they had left-over money from three countries. They all exchanged their monies at the local bank. Gunther got 1619.70 EEC units, Pierre got 8659.81 EEC units, and Mario got 2643.57 EEC units. They all started with the following monies.
+<p>1. Problem: Gunther had just been travelling around Europe with two of his buddies and they had left-over money from three countries. They all exchanged their monies at the local bank. Gunther got 1619.70 EEC units, Pierre got 8659.81 EEC units, and Mario got 2643.57 EEC units. They all started with the following monies.</p>
 
 <p>Gunther: 20.50 Francs, 12.23 Lira, 200 Marks
 <br>Pierre: 34.50 Francs, 80.20 Lira, 10 Marks
-<br>Mario: 12.20 Francs, 23.45 Lira, 210 Marks
+<br>Mario: 12.20 Francs, 23.45 Lira, 210 Marks</p>
 
-<p>What were the current exchange rates for the three countries?
+<p>What were the current exchange rates for the three countries?</p>
 
-<p>Newton Solution: This is a 3-equations, 3-unknowns problem which can be solved with matrices. MathLib has three different ways to solve Ax = B. The simplest way is with Gauss-Jordan elimination unless A happens to be singular. The Newton Solution is as follows:
+<p>Newton Solution: This is a 3-equations, 3-unknowns problem which can be solved with matrices. MathLib has three different ways to solve Ax = B. The simplest way is with Gauss-Jordan elimination unless A happens to be singular. The Newton Solution is as follows:</p>
 
 <p><tt>local m,A,B; // declare local variables</tt>
 <br><tt>A := [[20.5,12.23,200],</tt>
@@ -36,18 +36,18 @@ This page contains answers to various math and physics problems that were solved
 <br><tt>m := GetLibrary('math); // get library</tt>
 <br><tt>m:GaussJordan(A,B); // solve Ax=B, place x in B</tt>
 <br><tt>m:RoundDec(B,2) // round to two decimal places</tt>
-<br><tt>= [14.55,101.67,0.39]</tt>
+<br><tt>= [14.55,101.67,0.39]</tt></p>
 
 <p>14.55 EEC units per Franc,
 <br>101.69 EEC units per Lira,
-<br>0.39 EEC units per Mark.
+<br>0.39 EEC units per Mark.</p>
 
-<p>(Any N-equation problem can be solved in this manner.)
+<p>(Any N-equation problem can be solved in this manner.)</p>
 
-<p><a name="Physics"></a>Physics Section
+<p><a name="Physics"></a>Physics Section</p>
 
-<p>1. Problem: Cosmic background radiation is the light emitted from the Universe as a Planck black-body. The background noise from the sky was measured by an interferometer at an altitude of 40 km:
-<br>&nbsp;
+<p>1. Problem: Cosmic background radiation is the light emitted from the Universe as a Planck black-body. The background noise from the sky was measured by an interferometer at an altitude of 40 km:</p>
+
 <table border="3" cols="2" width="40%">
 <caption><thead>
 
@@ -135,13 +135,14 @@ This page contains answers to various math and physics problems that were solved
 <td>0.70</td>
 </tr>
 </table>
-Find the temperature of the Universe.
 
-<p>Newton Solution: Planck's black-body radiation formula is of the form
+<p>Find the temperature of the Universe.</p>
+
+<p>Newton Solution: Planck's black-body radiation formula is of the form</p>
 
 <p>flux = B f<sup>3</sup> / (exp(f*c<sub>2</sub>/T)-1)
 <br>where f = 1/wavelength
-<br>Minimize the difference between measured and calculated.
+<br>Minimize the difference between measured and calculated.</p>
 
 <p><tt>local m,data,answer,flux,f,c2;</tt>
 <br><tt>m := GetLibrary('math);</tt>
@@ -170,12 +171,13 @@ flux with (val,T,a);</tt>
 <br><tt>f := func(a)
 <br><tt>&nbsp;&nbsp;&nbsp; call RSSD with (call TUni with (a),a);
 <br><tt>call TUni with (m:Infimum(nil,f,[[0.1,6]],0));</tt>
-<br><tt>= 2.78750068219096</tt>
+<br><tt>= 2.78750068219096</tt></p>
 
-<p>Cosmic black-body temperature of the Universe is 2.79 K
+<p>Cosmic black-body temperature of the Universe is 2.79 K</p>
 
-<p>And using Works Calculations:
-<p><img src="/newtsprism/graphics/UniTemp.gif" alt="Works e.g." nosave border="0" height="482" width="322"></p>
+<p>And using Works Calculations:</p>
+
+<p><img src="/newtsprism/graphics/UniTemp.gif" alt="Works e.g." border="0" height="482" width="322"></p>
 
 </body>
 </html>
