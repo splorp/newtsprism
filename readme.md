@@ -8,3 +8,5 @@ Featuring content pulled from the Internet Archive.
 
 [web.archive.org/web/\*/http://members.aol.com/newtsprism/\*](https://web.archive.org/web/*/http://members.aol.com/newtsprism/*)
 [web.archive.org/web/\*/http://hometown.aol.com/newtsprism/\*](https://web.archive.org/web/*/http://hometown.aol.com/newtsprism/*)
+[web.archive.org/web/\*/http://homestead.dejanews.com/user.NewtsPrism/\*](https://web.archive.org/web/*/http://homestead.dejanews.com/user.NewtsPrism/*)
+[web.archive.org/web/\*/http://homestead.dejanews.com/user.prism2/\*](https://web.archive.org/web/*/http://homestead.dejanews.com/user.prism2/*)
